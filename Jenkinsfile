@@ -17,7 +17,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 echo "Running tests..."
-                sh 'npm test || echo "No tests found"'
+                sh '/opt/homebrew/bin/npm test || echo "No tests found"'
             }
         }
 
