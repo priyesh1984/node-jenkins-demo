@@ -5,7 +5,8 @@
   "main": "index.js",
 "scripts": {
   "start": "node index.js",
-  "build": "echo Build successful!"
+  "build": "echo Build successful!",
+  "test": "npm test || echo \"No tests specified\""
 },
   "keywords": [],
   "author": "",

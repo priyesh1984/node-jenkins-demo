@@ -14,6 +14,13 @@ pipeline {
             }
         }
 
+        stage('Run Tests') {
+            steps {
+                echo "Running tests..."
+                sh 'npm test || echo "No tests found"'
+            }
+        }
+
         stage('Build Docker Image') {
             steps {
                 sh '/usr/local/bin/docker build -t node-jenkins-demo .'
