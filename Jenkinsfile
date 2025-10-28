@@ -16,13 +16,13 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh '/usr/local/bin/docker build -t node-jenkins-demo .'
+                sh '/usr/local/bin/docker build -t my-first-ci-pipeline .'
             }
         }
 
         stage('Run Docker Container') {
             steps {
-                sh '/usr/local/bin/docker run -d -p 3000:3000 node-jenkins-demo'
+                sh '/usr/local/bin/docker run -d -p 3000:3000 my-first-ci-pipeline'
             }
         }
     }
